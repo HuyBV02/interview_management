@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 1px;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .header {
+            width: auto;
+            height: 50px;
+            background: linear-gradient(90deg, #ff0066, #ff9933);
+            color: white;
+            display: flex;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .container {
+            width: 800px;
+            padding: 0;
+        }
+
+        .item {
+            display: flex;
+            justify-content: start;
+            width: auto;
+            font-size: 16px;
+        }
+
+        .left-item {
+            width: 170px;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .right-item {
+            color: #404040;
+        }
+        .var {
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+        <div style="margin: auto">ACCOUNT INFO</div>
+    </div>
+    <div class="item">
+        <span>This email is from IMS system,</span>
+    </div>
+    <div class="item">
+        <span>Your account has been created. Please use the following credential to login: </span>
+    </div>
+    <div class="item">
+        <div class="left-item">Username:</div>
+        <div class="right-item" th:text="${data.username}"></div>
+    </div>
+    <div class="item">
+        <div class="left-item">Password:</div>
+        <div class="right-item" th:text="${data.password}"></div>
+    </div>
+    <div class="item">
+        <span>If anything wrong, please reach-out admin&nbsp;</span>
+        <span class="var" th:text="${data.recruiter}"></span>
+    </div>
+    <div class="item">
+        <span>We are so sorry for this inconvenience.</span>
+    </div>
+    <div class="item" style="font-weight: bold;border-top: 1px solid #b3b3b3;">
+        <span>Thanks & Regards!</span>
+    </div>
+    <div class="item">
+        <span>IMS Team</span>
+    </div>
+</div>
+</body>
+</html>

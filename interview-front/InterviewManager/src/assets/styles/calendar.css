@@ -1,0 +1,71 @@
+:root {
+    --fc-today-bg-color: none;
+    --fc-border-color: #cccccc;
+
+    --fc-event-bg-color: #d9d9d9;
+    --fc-event-border-color: #d9d9d9;
+    --fc-event-text-color: #333333;
+
+}
+
+table {
+    box-shadow: 1px 1px 1px #d9d9d9;
+}
+
+thead {
+    box-shadow: 1px 1px 1px #cccccc;
+}
+
+
+/* header */
+.fc .fc-toolbar.fc-header-toolbar {
+    margin-bottom: 10px;
+    position: sticky;
+    top: 0;
+    background: #ffffff;
+    z-index: 100;
+}
+
+.fc .fc-scrollgrid-section-header.fc-scrollgrid-section-sticky>* {
+    top: 35px;
+}
+/* header */
+
+
+.fc .fc-toolbar-title {
+    color: #8c8c8c;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+
+.event {
+    /* font-size: 16px; */
+    margin: 5px;
+    border-radius: 10px;
+}
+
+.fc-event-time {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px;
+}
+
+.fc-event-title,
+.fc-event-title-container {
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 2px;
+}
+
+.text {
+    color: #8c8c8c;
+}
+
+.select {
+    z-index: 10000;
+    width: 400px;
+}

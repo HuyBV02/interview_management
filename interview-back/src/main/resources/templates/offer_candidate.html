@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 1px;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .header {
+            width: auto;
+            height: 50px;
+            background: linear-gradient(90deg, #ff0066, #ff9933);
+            color: white;
+            display: flex;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .container {
+            width: 800px;
+            padding: 0;
+        }
+
+        .item {
+            display: flex;
+            justify-content: start;
+            width: auto;
+            font-size: 16px;
+        }
+
+        .var {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+        <div style="margin: auto">An Offer Need To Review</div>
+    </div>
+    <div class="item">
+        <span>This email is from IMS system,</span>
+    </div>
+    <div class="item">
+        <span>We would like to extend a job offer to you for the position&nbsp;</span>
+        <span class="var" th:text="${data.position}"></span>
+    </div>
+    <div class="item">
+        <span>The contract will start on&nbsp;</span>
+        <span class="var" th:text="${data.startContract}"></span>
+        <span>&nbsp;and end on&nbsp;</span>
+        <span class="var" th:text="${data.endContract}"></span>
+    </div>
+    <div class="item">
+        <span>Contract type:&nbsp;</span>
+        <span class="var" th:text="${data.contractType}"></span>
+    </div>
+    <div class="item">
+        <span>Basic salary:&nbsp;</span>
+        <span class="var" th:text="${data.basicSalary}"></span>
+        <span>&nbsp;VND</span>
+    </div>
+    <div class="item">
+        <span>Department:&nbsp;</span>
+        <span class="var" th:text="${data.department}"></span>
+    </div>
+    <div class="item">
+        <span>Level:&nbsp;</span>
+        <span class="var" th:text="${data.level}"></span>
+    </div>
+    <div class="item">
+        <span>Please review the detailed offer letter and let us know your decision.</span>
+    </div>
+    <div class="item">
+        <span>If anything wrong, please reach-out recruiter&nbsp;</span>
+        <span class="var" th:text="${data.recruiter}"></span>
+    </div>
+    <div class="item">
+        <span>We are so sorry for this inconvenience.</span>
+    </div>
+    <div class="item" style="font-weight: bold;border-top: 1px solid #b3b3b3;">
+        <span>Thanks & Regards!</span>
+    </div>
+    <div class="item">
+        <span>IMS Team</span>
+    </div>
+</div>
+</body>
+</html>

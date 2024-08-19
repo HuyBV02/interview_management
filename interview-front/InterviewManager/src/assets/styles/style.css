@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --background-content-color: #edf2f9;
+  --navbar-color: #ffffff;
+  --primary-color: #00a3ff;
+  --secondary-color: #dfe3eb;
+}
+
+.bg-content-color {
+  background-color: var(--background-content-color);
+}
+.bg-navbar-color {
+  background-color: var(--navbar-color);
+}
+.navbar-icon-size {
+  font-size: 32px;
+}
+.bi {
+  cursor: pointer;
+}
+.modal-backdrop.show {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal:not(.show) {
+  opacity: 0.5;
+  filter: blur(2px);
+  pointer-events: none;
+}
+
+.modal.show {
+  opacity: 1;
+  filter: none;
+  pointer-events: auto;
+}
